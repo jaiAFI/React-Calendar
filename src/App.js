@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  const daysArray = [];
+  for (let i = 1; i <= 30; i++) {
+    daysArray.push(i);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="wrapper">
+        <div className="container">
+          <div className="header-container">
+            <div className="prev-button">Prev</div>
+            <div className="month-name">{`March, 2024`}</div>
+            <div className="next-button">Next</div>
+          </div>
+          <div className="daynames-container">
+            {days.map((day) => (
+              <div>{day}</div>
+            ))}
+          </div>
+          <div className="days-container">
+            {daysArray.map((number, index) => (
+              <div className="day-container" key={index}>{number}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
