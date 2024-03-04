@@ -62,5 +62,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(13, 92, 211, 0.075) 0px 1px 4px;
+}
+
+.today{
+  background-color: rgba(214, 214, 40, 0.199);
+}
+
+.button{
+  background-color: rgba(168, 51, 223, 0.705);
+  width: 10%;
+  padding: 1%;
+  border-radius: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(236, 239, 241);
 }
